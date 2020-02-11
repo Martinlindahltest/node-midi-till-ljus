@@ -24,9 +24,9 @@ function triggPusher(input) {
 }
 
 app.post('/', (req, res) => {
-    console.log(req.body.text);
+    console.log(req.body);
     res.send("this is post request");
-    triggPusher("hello World")
+    triggPusher(req.body)
 
 })
 
